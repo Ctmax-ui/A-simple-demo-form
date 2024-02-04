@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+.warning-text{
+    animation: erorMsg 150ms ease;
+}
+@keyframes erorMsg {
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(25px);
+    }
+    100%{
+        transform: translateX(-25px);
+    }
+}
