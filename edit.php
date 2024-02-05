@@ -6,6 +6,7 @@ if(!isset($_SESSION["login_status"])){
 
 if($_SESSION["username"] != "admin"){
     header("Location: user.php");
+    exit();
 }
 
 require_once("./actions/connectdb.php");
