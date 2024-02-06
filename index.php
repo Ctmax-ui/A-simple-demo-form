@@ -120,24 +120,17 @@ $selectresult = mysqli_query($connect, $dataSql);
                     <input class="form-control has-validated" type="text" name="username" placeholder="Create a Username" required value="<?php echo $username; ?>">
                     <label for="floatingInput">Create a Username</label>
                 </div>
-
-
                 <div class="form-floating mb-3">
                     <input class="form-control" type="email" name="usermail" placeholder="Type your email" required value="<?php echo $usermail; ?>">
                     <label for="floatingInput">Put an valid Email</label>
                 </div>
-
                 <div class="form-floating mb-3">
                     <input class="form-control" type="text" name="password" placeholder="Create a new pasword" required value="<?php echo $password; ?>">
                     <label for="floatingPassword">Password</label>
                 </div>
-
-
                 <input class="input-group" type="file" name="userfile">
-
                 <br>
                 <input class=" mt-2 btn btn-outline-success" type="submit" name="create" value="Create Account"> ><br
-
                 <?php if (!empty($errorMsg['errName'])) {
                     echo '<div class="text-danger mt-3">' . $errorMsg['errName'] . "</div>";
                 } ?>
@@ -162,22 +155,17 @@ $selectresult = mysqli_query($connect, $dataSql);
                 <th><?php echo $row["username"] ?></th>
                 <th><?php echo $row["usermail"] ?></th>
                 <th><?php echo $row["password"]?></th>
-
                 <th><?php if (!empty($row["userfile"]) && $row["userfile"] != "NULL" ) { ?>
                         <img style="width: 100px;" src="./userfiledata/<?php echo $row["userfile"]; ?>" alt="">
                     <?php } else if ($row["userfile"] == "NULL" || empty($row["userfile"])) {
                         echo "No profile";
                     } ?>
                 </th>
-
-
                 <th><a href="./delete.php?id=<?php echo $row["id"] ?>">Remove</a></th>
                 <th><a href="./edit.php?id=<?php echo $row["id"] ?>">Edit</a></th>
             </tr>
         <?php endwhile ?>
     </table>
-
-
 
 
 
